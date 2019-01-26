@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import java.lang.math;
+
+public class Calculator {
+	
+	//state or characteristics of calculator 
+	int x;
+	int y;
+	int result;
+	
+	//behavior of the functionality of calculator 
+	public void add() {
+		result = x + y;
+	}
+	public void subtract() {
+		result = x - y;
+	}
+	public void multiply() {
+		result = x * y;
+	}
+	public void divide() {
+		result = x / y;
+	}
+	
+	
+
+	public static void main(String[] argus)
+	{
+		Calculator myCalculator = new Calculator(); //makes object of Adder
+		System.out.println("Enter the first number");
+		Scanner scan = new Scanner(System.in);
+		myCalculator.x = scan.nextInt();
+		//myCalcultor.x = first number;
+		
+		System.out.println("Enter the second number");
+		Scanner scan2 = new Scanner(System.in);
+		myCalculator.y = scan2.nextInt();
+		//myCalculator.y = second number;
+		
+		myCalculator.add();
+		System.out.println("When added the calculator produced : " + myCalculator.result);	
+	  
+		myCalculator.subtract();
+		System.out.println("When subtracted the calculator produced : " + myCalculator.result);
+		
+		myCalculator.multiply();
+		System.out.println("When multiplied the calculator produced : " + myCalculator.result);	
+	  
+		myCalculator.divide();
+		System.out.println("When divided the calculator produced : " + myCalculator.result);
+	}	
+}
